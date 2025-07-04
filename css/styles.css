@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Navegação */
+nav {
+    background: #2c3e50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-list a:hover {
+    background: #34495e;
+}
+
+/* Seções */
+.section {
+    margin: 30px 0;
+    padding: 20px 0;
+}
+
+.section:not(:last-child) {
+    border-bottom: 2px solid #ecf0f1;
+}
+
+/* Perfil */
+.perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.perfil h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.perfil h2 {
+    color: #7f8c8d;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.perfil p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Títulos das seções */
+h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+}
+
+/* Items */
+.item {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.item h4 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.item p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Listas */
+.detalhes {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.detalhes li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.detalhes li:before {
+    content: "▸";
+    color: #3498db;
+    position: absolute;
+    left: -15px;
+}
+
+/* Projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projeto {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #e74c3c;
+}
+
+.projeto h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.tecnologias {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tecnologias li {
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+/* Habilidades e Certificações */
+.habilidades-certificacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.skills-list, .cert-list {
+    list-style: none;
+}
+
+.skills-list li, .cert-list li {
+    background: #ecf0f1;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #f39c12;
+}
+
+/* Contato */
+.contato-list {
+    list-style: none;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contato-list li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.contato-list a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contato-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin: 0 10px;
+        padding: 15px;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-list li {
+        margin: 5px 0;
+    }
+    
+    .habilidades-certificacoes {
+        grid-template-columns: 1fr;
+    }
+    
+    .perfil h1 {
+        font-size: 2em;
+    }
+    
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+}
